@@ -9,7 +9,8 @@ public class Task10 {
         if (Float.isInfinite(a) || Float.isInfinite(b)) {
             return a == b;
         }
-        return Math.floor(Math.abs(a - b) * Math.pow(10, precision)) == 0;
+        float eps = (float) Math.pow(10, -precision);
+        return Math.abs(a - b) < eps;
     }
 
     public static void main(String[] args) {
