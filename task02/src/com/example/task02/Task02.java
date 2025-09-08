@@ -4,17 +4,17 @@ public class Task02 {
 
     public static String solution(String input) {
         long parsedInputAsLong = Long.parseLong(input);
-        String result = "long";
-        if (parsedInputAsLong <= Integer.MAX_VALUE && parsedInputAsLong >= Integer.MIN_VALUE) {
-            result = "int";
+        if (parsedInputAsLong <= Byte.MAX_VALUE && parsedInputAsLong >= Byte.MIN_VALUE) {
+            return "byte";
         }
         if (parsedInputAsLong <= Short.MAX_VALUE && parsedInputAsLong >= Short.MIN_VALUE) {
-            result = "short";
+            return "short";
         }
-        if (parsedInputAsLong <= Byte.MAX_VALUE && parsedInputAsLong >= Byte.MIN_VALUE) {
-            result = "byte";
+        if (parsedInputAsLong <= Integer.MAX_VALUE && parsedInputAsLong >= Integer.MIN_VALUE) {
+            return "int";
         }
-        return result;
+        return "long";
+
     }
 
     public static void main(String[] args) {

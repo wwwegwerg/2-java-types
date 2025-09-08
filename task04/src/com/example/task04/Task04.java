@@ -9,7 +9,7 @@ public class Task04 {
             case "-":
                 return a - b;
             case "/":
-                return a / (float) b;
+                return (float) a / b;
             default:
                 return a * b;
         }
